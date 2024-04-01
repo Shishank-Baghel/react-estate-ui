@@ -1,0 +1,68 @@
+@import "../../reponsive.scss";
+nav{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+
+    .left{
+        flex: 3;    
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        a {
+            transition: all 0.4s ease;
+        
+            @include sm {
+              display: none;
+            }
+        
+            &:hover {
+              scale: 1.05;
+            }
+          }
+
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            align-items: center;    
+         }
+         img {
+            width: 40px;
+          }
+          span{
+            @include md{
+                display: none;
+            }
+
+            @include sm{
+                display: initial;
+            }
+          }
+}
+    .right{
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: #fcf5f3;
+        height: 100%;
+
+        @include md {
+            background-color: transparent;
+          }
+      
+          a {
+            padding: 12px 24px;
+            margin: 20px;
+          }
+      
+
+    }
+
+    .register {
+        background-color: #fece51;
+      }
+}
